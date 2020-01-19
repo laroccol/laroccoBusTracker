@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>react Demo</title>
+
+    <!-- https://blog.logrocket.com/how-to-use-bootstrap-with-react-a354715d1121 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- These are the React core modules    -->
+    <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+
+
+    <!-- This is a minimal implementation of jQuery which still allows us to use
+     jQuery's handy selector functions. Legacy apps being converted to React would use this approach.
+     We should never modify the DOM with jQuery (because React is doing that), and this
+     minified version of jQuery basically doesn't provide any functions to do that.
+     -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+
+    <!-- students: for lab demo, use the following script:
+    <script src="./babelApproach.js"></script>
+    -->
+
+     <script src="./babelApproach.js"></script>
+
+    <!-- to use old jQuery approach, use the following script:
+    <script src="./jQueryApproach.js"></script>
+    -->
+
+</head>
+
+<!-- Bootstrap needs this div tag -->
+<div class="container-fluid">
+<body>
+    <button id='button' class="btn-primary">List courses</button>
+
+    <!-- Something like the following goes in the <p> below:
+    List of sophomore SE courses for winter: -->
+    <h3 class="text-primary">List of <em id="year"></em> <em id="program"></em> courses for <em id="quarter"></em>:</h3>
+
+    <div id="courselist" class="text-danger bg-info">
+        <!-- unsigned course list goes here-->
+    </div>
+    <div id="courselist2" class="text-info bg-info">
+        <!-- unsigned course list goes here-->
+    </div>
+</body>
+</div>
+</html>

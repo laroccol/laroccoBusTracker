@@ -1,0 +1,71 @@
+<!--Lucas LaRocco-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Lucas LaRocco</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- This is a minimal implementation of jQuery which still allows us to use
+	 jQuery's handy selector functions. Legacy apps being converted to React would use this approach.
+	 We should never modify the DOM with jQuery (because React is doing that), and this
+	 minified version of jQuery basically doesn't provide any functions to do that.
+	 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+            crossorigin="anonymous"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+            crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css"/>
+
+    <!-- These are the React core modules -->
+    <script src="https://unpkg.com/react@15.4.2/dist/react.js"></script>
+    <script src="https://unpkg.com/react-dom@15.4.2/dist/react-dom.js"></script>
+
+    <style>
+        #map {
+            border: 1px solid black;
+            width: 100%;
+            height: 400px;
+        }
+
+        #table1 {
+            overflow-y: scroll;
+            height: 400px; // change this to desired height
+
+        }
+    </style>
+
+    <script src="key.js"></script>
+    <script src="BusTrackerMQBabel.js"></script>
+    <script src="BusTableBabel.js"></script>
+    <script>
+        new BusTrackerMQ(); // note you can also implement the static method approach if you wish
+    </script>
+</head>
+<body>
+<label class="text-primary">Route: </label><input id="route", type=text value="">
+<input class="btn btn-success" id="start" type=button value="Start">
+<input class="btn btn-danger" id="stop" type=button value="Stop">
+<input class="btn btn-primary" id="report" type="button" value="Report">
+<label class="text-info" id="update"><!-- messages go here --></label>
+<div id="map"><!-- the map is displayed here --></div>
+<div class="table-responsive" id="table1">
+
+</div>
+<div id="message" class="alert alert-danger"></div>
+
+</body>
+</html>
